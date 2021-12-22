@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.overlay {
+  align-content: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+button {
+  background-color: #FFF;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  color: #000;
+  display: inline-block;
+  font-size:24px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 2s 1.5s;
+}
+
+.video-background {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.video-background iframe {
+  height: 100vh;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background iframe {
+    height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-background iframe {
+    width: 177.78vh;
+  }
+}
